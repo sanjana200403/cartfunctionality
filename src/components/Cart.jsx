@@ -12,7 +12,7 @@ const Cart = ({state,dispatch}) => {
         })
     }
     useEffect(()=>{
-        setTotal( cart.reduce((acc,curr)=> acc + curr.price,0))
+        setTotal( cart.reduce((acc,curr)=> acc + curr.price*curr.qty,0))
       
     },[cart])
 
